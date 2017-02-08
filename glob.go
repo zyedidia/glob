@@ -84,5 +84,5 @@ func globToRegex(glob string) (*regexp.Regexp, error) {
 			regex += string(ch)
 		}
 	}
-	return regexp.Compile(regex)
+	return regexp.Compile("^" + regex + "$")
 }
