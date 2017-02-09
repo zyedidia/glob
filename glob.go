@@ -1,11 +1,17 @@
+// Package glob provides objects for matching strings with globs
 package glob
 
 import "regexp"
 
+// Glob is a wrapper of *regexp.Regexp.
+// It should contain a glob expression compiled into a regular expression.
 type Glob struct {
 	*regexp.Regexp
 }
 
+// Compile a takes a glob expression as a string and transforms it
+// into a *Glob object (which is really just a regular expression)
+// Compile also returns a possible error.
 func Compile(pattern string) (*Glob, error) {
 	r, err := globToRegex(pattern)
 	return &Glob{r}, err
