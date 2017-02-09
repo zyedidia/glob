@@ -1,5 +1,7 @@
 # String globbing in Go
 
+[![GoDoc](https://godoc.org/github.com/zyedidia/glob?status.svg)](http://godoc.org/github.com/zyedidia/glob)
+
 This package adds support for globs in Go.
 
 It simply converts glob expressions to regexps. I try to follow the standard defined [here](http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_13).
